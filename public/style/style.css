@@ -50,6 +50,7 @@ section .container {
   cursor: pointer;
   font-size: 1.5rem;
   color: #fff;
+  user-select: none;
 }
 
 .nav_container {
@@ -101,6 +102,7 @@ section .container {
   align-items: center;
   justify-content: flex-end;
   margin-bottom: 30px;
+  user-select: none;
 }
 .nav_container .nav_wrapper .close_btn span i {
   cursor: pointer;
