@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 0;
+  background-color: #ddd;
+  position: relative;
+  z-index: 5;
+}
+.back_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  z-index: 8 !important ;
+}
+
+.menu_burger {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.nav_container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008a;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
+}
+.block {
+  opacity: 1;
+  visibility: visible;
+}
+
+.block .nav_wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+}
+
+.nav_container .nav_wrapper {
+  width: 350px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #0a85ed;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.06, 0.13, 0.03, 0.3);
+  transform: translateX(-350px);
+}
+@media (max-width: 475px) {
+  .nav_wrapper {
+    width: 100% !important;
+  }
+}
+
+.nav_container .nav_wrapper .close_btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+.nav_container .nav_wrapper .close_btn span i {
+  cursor: pointer;
+  color: #fff;
+}
+.nav_container .nav_wrapper nav ul li {
+  margin: 1rem 0;
+}
+.nav_container .nav_wrapper nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.nav_container .nav_wrapper .nav_social {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  margin-bottom: 25px;
+}
+
+.nav_container .nav_wrapper .nav_app_download {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
